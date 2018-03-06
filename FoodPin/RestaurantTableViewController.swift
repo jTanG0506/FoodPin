@@ -61,6 +61,8 @@ class RestaurantTableViewController: UITableViewController {
     cell.typeLabel.text = restaurantTypes[indexPath.row]
     cell.locationLabel.text = restaurantLocations[indexPath.row]
     
+    cell.selectionStyle = .none
+    
     return cell
   }
   
