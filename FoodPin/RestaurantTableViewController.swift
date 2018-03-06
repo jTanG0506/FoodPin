@@ -17,6 +17,13 @@ class RestaurantTableViewController: UITableViewController {
                          "Five Leaves", "Cafe Lore", "Confessional", "Barrafina",
                          "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
   
+  var restaurantImages = ["cafedeadend", "homei", "teakha", "cafeloisl",
+                          "petiteoyster", "forkeerestaurant", "posatelier",
+                          "bourkestreetbakery", "haighschocolate", "palominoespresso",
+                          "upstate", "traif", "grahamavenuemeats", "wafflewolf",
+                          "fiveleaves", "cafelore", "confessional", "barrafina",
+                          "donostia", "royaloak", "caskpubkitchen"]
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
@@ -36,7 +43,7 @@ class RestaurantTableViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
     
     cell.textLabel?.text = restaurantNames[indexPath.row]
-    cell.imageView?.image = UIImage(named: "restaurant")
+    cell.imageView?.image = UIImage(named: restaurantImages[indexPath.row])
     
     return cell
   }
