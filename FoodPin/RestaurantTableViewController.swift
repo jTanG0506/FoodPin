@@ -93,10 +93,11 @@ class RestaurantTableViewController: UITableViewController {
     optionMenu.addAction(callAction)
     
     // Check in action.
-    let checkInAction = UIAlertAction(title: "Check in", style: .default) { (action) in
+    let checkInTitle = restaurantIsVisited[indexPath.row] ? "Undo Check in" : "Check in"
+    let checkInAction = UIAlertAction(title: checkInTitle, style: .default) { (action) in
       let cell = tableView.cellForRow(at: indexPath)
-      cell?.accessoryType = .checkmark
-      self.restaurantIsVisited[indexPath.row] = true
+      self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+      cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .checkmark : .none
     }
     optionMenu.addAction(checkInAction)
     
