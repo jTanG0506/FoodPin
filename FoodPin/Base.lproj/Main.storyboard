@@ -70,6 +70,13 @@
                                                 <constraint firstItem="V5U-dE-0uk" firstAttribute="leading" secondItem="j1l-I7-wWJ" secondAttribute="leading" constant="15" id="zse-9X-kEM"/>
                                             </constraints>
                                         </view>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="heart-tick" translatesAutoresizingMaskIntoConstraints="NO" id="Qtn-n0-Ydn">
+                                            <rect key="frame" x="330" y="20" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="2rx-me-TF9"/>
+                                                <constraint firstAttribute="height" constant="25" id="524-XO-WhD"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="WtH-rY-HXQ" secondAttribute="bottom" id="02C-Wl-6BD"/>
@@ -78,10 +85,13 @@
                                         <constraint firstAttribute="trailing" secondItem="WtH-rY-HXQ" secondAttribute="trailing" id="SbK-tN-txZ"/>
                                         <constraint firstItem="j1l-I7-wWJ" firstAttribute="leading" secondItem="WIA-9o-ysx" secondAttribute="leading" id="YXp-lg-znj"/>
                                         <constraint firstAttribute="bottom" secondItem="j1l-I7-wWJ" secondAttribute="bottom" id="a3L-3i-A7a"/>
+                                        <constraint firstItem="Qtn-n0-Ydn" firstAttribute="top" secondItem="WIA-9o-ysx" secondAttribute="top" constant="20" id="nyI-yt-GEa"/>
                                         <constraint firstItem="WtH-rY-HXQ" firstAttribute="leading" secondItem="WIA-9o-ysx" secondAttribute="leading" id="pCr-ja-cKp"/>
+                                        <constraint firstAttribute="trailing" secondItem="Qtn-n0-Ydn" secondAttribute="trailing" constant="20" id="wxW-xF-6QW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="heartImageView" destination="Qtn-n0-Ydn" id="1vz-Hi-vma"/>
                                     <outlet property="locationLabel" destination="kgI-Jc-IfC" id="0I6-ax-QlS"/>
                                     <outlet property="nameLabel" destination="Heg-9s-0gM" id="eLs-CN-e7Q"/>
                                     <outlet property="thumbnailImageView" destination="WtH-rY-HXQ" id="fsr-gZ-bQQ"/>
@@ -100,4 +110,7 @@
             <point key="canvasLocation" x="504.80000000000001" y="-158.77061469265368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart-tick" width="22" height="21"/>
+    </resources>
 </document>

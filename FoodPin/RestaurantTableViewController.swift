@@ -63,7 +63,7 @@ class RestaurantTableViewController: UITableViewController {
     cell.thumbnailImageView.image = UIImage(named: restaurantImages[indexPath.row])
     cell.typeLabel.text = restaurantTypes[indexPath.row]
     cell.locationLabel.text = restaurantLocations[indexPath.row]
-    cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
+    cell.heartImageView.isHidden = !restaurantIsVisited[indexPath.row]
     
     cell.selectionStyle = .none
     
@@ -95,9 +95,9 @@ class RestaurantTableViewController: UITableViewController {
     // Check in action.
     let checkInTitle = restaurantIsVisited[indexPath.row] ? "Undo Check in" : "Check in"
     let checkInAction = UIAlertAction(title: checkInTitle, style: .default) { (action) in
-      let cell = tableView.cellForRow(at: indexPath)
+      let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
       self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
-      cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .checkmark : .none
+      cell.heartImageView.isHidden = !self.restaurantIsVisited[indexPath.row]
     }
     optionMenu.addAction(checkInAction)
     
