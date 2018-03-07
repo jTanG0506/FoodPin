@@ -2,7 +2,7 @@
 Restaurant information and pinning app based on Simon Ng's book
 
 - [X] Chapter 9 - Customize Table Views Using Prototype Cell
-- [ ] Chapter 10 - Interacting with Table Views and Using UIAlertController
+- [X] Chapter 10 - Interacting with Table Views and Using UIAlertController
 - [ ] Chapter 11 - Table Row Deletion, Swipe for Actions, Activity Controller and MVC
 - [ ] Chapter 12 - Introduction to Navigation Controller and Segue
 - [ ] Chapter 13 - Object Oriented Programming, Project Organization and Code Documentation
