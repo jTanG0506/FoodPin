@@ -93,29 +93,31 @@ class RestaurantTableViewController: UITableViewController {
     }
     optionMenu.addAction(callAction)
     
-    // Check in action.
-    let checkInTitle = restaurantIsVisited[indexPath.row] ? "Undo Check in" : "Check in"
-    let checkInAction = UIAlertAction(title: checkInTitle, style: .default) { (action) in
-      let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
-      self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
-      cell.heartImageView.isHidden = !self.restaurantIsVisited[indexPath.row]
-    }
-    optionMenu.addAction(checkInAction)
-    
     tableView.deselectRow(at: indexPath, animated: false)
-    
     present(optionMenu, animated: true, completion: nil)
   }
   
-  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-    // Delete the row from the data source
-    if editingStyle == .delete {
-
+  override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    
+    let toggleAction = UIContextualAction(style: .normal, title: "") {
+      (action, sourceView, completionHandler) in
+      
+      self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+      let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
+      cell.heartImageView.isHidden = !self.restaurantIsVisited[indexPath.row]
+      
+      completionHandler(true)
     }
     
+    // Display the appropriate icon.
+    toggleAction.image = restaurantIsVisited[indexPath.row] ? UIImage(named: "undo") : UIImage(named: "tick")
+    toggleAction.backgroundColor = UIColor(red: 0.149, green: 0.604, blue: 0.278, alpha: 1)
     
+    let swipeConfiguration = UISwipeActionsConfiguration(actions: [toggleAction])
+    return swipeConfiguration
   }
   
+  // Right swipe actions.
   override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     let deleteAction = UIContextualAction(style: .destructive, title: "") {
       (action, sourceView, completionHandler) in
