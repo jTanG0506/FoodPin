@@ -106,4 +106,17 @@ class RestaurantTableViewController: UITableViewController {
     present(optionMenu, animated: true, completion: nil)
   }
   
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    // Delete the row from the data source
+    if editingStyle == .delete {
+      restaurantNames.remove(at: indexPath.row)
+      restaurantImages.remove(at: indexPath.row)
+      restaurantLocations.remove(at: indexPath.row)
+      restaurantTypes.remove(at: indexPath.row)
+      restaurantIsVisited.remove(at: indexPath.row)
+    }
+    
+    tableView.deleteRows(at: [indexPath], with: .fade)
+  }
+  
 }
