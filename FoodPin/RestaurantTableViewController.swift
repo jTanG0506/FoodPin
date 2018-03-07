@@ -73,6 +73,13 @@ class RestaurantTableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
     
+    if let popoverController = optionMenu.popoverPresentationController {
+      if let cell = tableView.cellForRow(at: indexPath) {
+        popoverController.sourceView = cell
+        popoverController.sourceRect = cell.bounds
+      }
+    }
+    
     // Cancel action.
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
     optionMenu.addAction(cancelAction)
