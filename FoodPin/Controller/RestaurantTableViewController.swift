@@ -10,6 +10,7 @@ import UIKit
 
 class RestaurantTableViewController: UITableViewController {
   
+  // MARK: - Properties
   var restaurants:[Restaurant] = [
     Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong", image: "cafedeadend", isVisited: false),
     Restaurant(name: "Homei", type: "Cafe", location: "Hong Kong", image: "homei", isVisited: false),
@@ -34,14 +35,14 @@ class RestaurantTableViewController: UITableViewController {
     Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "London", image: "caskpubkitchen", isVisited: false)
   ]
   
+  // MARK: - View controller life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.cellLayoutMarginsFollowReadableWidth = true
     navigationController?.navigationBar.prefersLargeTitles = true
   }
   
-  // MARK: - Table view data source
-  
+  // MARK: - UITableViewDataSource Protocol
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
@@ -85,6 +86,7 @@ class RestaurantTableViewController: UITableViewController {
     return swipeConfiguration
   }
   
+  // MARK: - UITableViewDelegate Protocol
   // Right swipe actions.
   override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     let deleteAction = UIContextualAction(style: .destructive, title: "") {
@@ -130,7 +132,7 @@ class RestaurantTableViewController: UITableViewController {
     return swipeConfiguration
   }
   
-  // Prepare for segue.
+  // MARK: - Navigation
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showRestuarantDetail" {
       if let indexPath = tableView.indexPathForSelectedRow {
