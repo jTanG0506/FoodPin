@@ -124,9 +124,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-hh-EcJ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nMJ-5m-ZPw">
+                                <rect key="frame" x="118.5" y="301" width="138.5" height="65.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7E-Y0-0dR">
+                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6M-nY-2Mw">
+                                        <rect key="frame" x="50.5" y="22.5" width="37.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kum-Df-oZO">
+                                        <rect key="frame" x="36.5" y="45" width="65.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nMJ-5m-ZPw" firstAttribute="centerX" secondItem="wa6-hD-lKX" secondAttribute="centerX" id="3um-qU-Eal"/>
+                            <constraint firstItem="nMJ-5m-ZPw" firstAttribute="centerY" secondItem="wa6-hD-lKX" secondAttribute="centerY" id="DEh-JP-IXX"/>
                             <constraint firstItem="B4M-CZ-bgM" firstAttribute="trailing" secondItem="OMN-hh-EcJ" secondAttribute="trailing" id="OkS-X4-108"/>
                             <constraint firstItem="OMN-hh-EcJ" firstAttribute="leading" secondItem="B4M-CZ-bgM" secondAttribute="leading" id="YBP-Ns-8Ls"/>
                             <constraint firstItem="OMN-hh-EcJ" firstAttribute="top" secondItem="B4M-CZ-bgM" secondAttribute="top" id="iKx-wQ-Bbl"/>
@@ -136,6 +161,9 @@
                     </view>
                     <connections>
                         <outlet property="restaurantImageView" destination="OMN-hh-EcJ" id="88r-HR-BkF"/>
+                        <outlet property="restaurantLocationLabel" destination="Kum-Df-oZO" id="BI0-kc-I9h"/>
+                        <outlet property="restaurantNameLabel" destination="p7E-Y0-0dR" id="z8v-hu-XoZ"/>
+                        <outlet property="restaurantTypeLabel" destination="E6M-nY-2Mw" id="ilK-T7-M9h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pY-5C-EXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
