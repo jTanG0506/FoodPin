@@ -71,33 +71,6 @@ class RestaurantTableViewController: UITableViewController {
     return cell
   }
   
-  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
-    
-    // Provide sourceView and sourceRect for iPad.
-    if let popoverController = optionMenu.popoverPresentationController {
-      if let cell = tableView.cellForRow(at: indexPath) {
-        popoverController.sourceView = cell
-        popoverController.sourceRect = cell.bounds
-      }
-    }
-    
-    // Cancel action.
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-    optionMenu.addAction(cancelAction)
-
-    // Call action.
-    let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default) { (action) in
-      let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet", preferredStyle: .alert)
-      alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-      self.present(alertMessage, animated: true, completion: nil)
-    }
-    optionMenu.addAction(callAction)
-    
-    tableView.deselectRow(at: indexPath, animated: false)
-    present(optionMenu, animated: true, completion: nil)
-  }
-  
   override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     
     let toggleAction = UIContextualAction(style: .normal, title: "") {
@@ -166,5 +139,16 @@ class RestaurantTableViewController: UITableViewController {
     
     let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
     return swipeConfiguration
+  }
+  
+  // Prepare for segue.
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showRestuarantDetail" {
+      if let indexPath = tableView.indexPathForSelectedRow {
+        print("x")
+        let destinationController = segue.destination as! RestaurantDetailViewController
+        destinationController.restaurantImageName = restaurantImages[indexPath.row]
+      }
+    }
   }
 }

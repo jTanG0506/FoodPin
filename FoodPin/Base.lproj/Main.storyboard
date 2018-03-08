@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -67,6 +68,7 @@
                                                 <constraint firstItem="kgI-Jc-IfC" firstAttribute="centerY" secondItem="j1l-I7-wWJ" secondAttribute="centerY" id="FBd-X1-hF4"/>
                                                 <constraint firstAttribute="trailing" secondItem="kgI-Jc-IfC" secondAttribute="trailing" constant="15" id="SNk-kO-cba"/>
                                                 <constraint firstItem="V5U-dE-0uk" firstAttribute="centerY" secondItem="j1l-I7-wWJ" secondAttribute="centerY" id="oVq-mT-5Pa"/>
+                                                <constraint firstItem="kgI-Jc-IfC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="j1l-I7-wWJ" secondAttribute="leading" constant="20" symbolic="YES" id="rKz-WI-caV"/>
                                                 <constraint firstItem="V5U-dE-0uk" firstAttribute="leading" secondItem="j1l-I7-wWJ" secondAttribute="leading" constant="15" id="zse-9X-kEM"/>
                                             </constraints>
                                         </view>
@@ -96,6 +98,7 @@
                                     <outlet property="nameLabel" destination="Heg-9s-0gM" id="eLs-CN-e7Q"/>
                                     <outlet property="thumbnailImageView" destination="WtH-rY-HXQ" id="fsr-gZ-bQQ"/>
                                     <outlet property="typeLabel" destination="s7L-db-oTX" id="iMM-Ft-S4C"/>
+                                    <segue destination="E7b-RQ-nOa" kind="show" identifier="showRestuarantDetail" id="rwl-fC-ADD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -108,7 +111,36 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M60-qE-DkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="-158.77061469265368"/>
+            <point key="canvasLocation" x="1063" y="-161"/>
+        </scene>
+        <!--Restaurant Detail View Controller-->
+        <scene sceneID="6Ie-Bn-zsv">
+            <objects>
+                <viewController id="E7b-RQ-nOa" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wa6-hD-lKX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-hh-EcJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B4M-CZ-bgM" firstAttribute="trailing" secondItem="OMN-hh-EcJ" secondAttribute="trailing" id="OkS-X4-108"/>
+                            <constraint firstItem="OMN-hh-EcJ" firstAttribute="leading" secondItem="B4M-CZ-bgM" secondAttribute="leading" id="YBP-Ns-8Ls"/>
+                            <constraint firstItem="OMN-hh-EcJ" firstAttribute="top" secondItem="B4M-CZ-bgM" secondAttribute="top" id="iKx-wQ-Bbl"/>
+                            <constraint firstItem="B4M-CZ-bgM" firstAttribute="bottom" secondItem="OMN-hh-EcJ" secondAttribute="bottom" id="mfb-OS-Rk0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B4M-CZ-bgM"/>
+                    </view>
+                    <connections>
+                        <outlet property="restaurantImageView" destination="OMN-hh-EcJ" id="88r-HR-BkF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0pY-5C-EXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1785" y="-161"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Qp-0D-rDY">
@@ -126,7 +158,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afl-Rb-p56" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="98" y="-159"/>
+            <point key="canvasLocation" x="364" y="-160"/>
         </scene>
     </scenes>
     <resources>
