@@ -10,21 +10,13 @@ import UIKit
 
 class RestaurantDetailViewController: UIViewController {
   
+  // MARK: - Properties
   var restaurant: Restaurant = Restaurant()
   
-  @IBOutlet weak var restaurantImageView: UIImageView!
-  @IBOutlet weak var restaurantNameLabel: UILabel!
-  @IBOutlet weak var restaurantTypeLabel: UILabel!
-  @IBOutlet weak var restaurantLocationLabel: UILabel!
-  
+  // MARK: - View controller life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     navigationItem.largeTitleDisplayMode = .never
-    
-    restaurantImageView.image = UIImage(named: restaurant.image)
-    restaurantNameLabel.text = restaurant.name
-    restaurantTypeLabel.text = restaurant.type
-    restaurantLocationLabel.text = restaurant.location
   }
   
 }
