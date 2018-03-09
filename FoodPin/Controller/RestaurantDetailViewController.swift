@@ -49,6 +49,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDelegate, UIT
                                                for: indexPath) as! RestaurantDetailIconTextCell
       cell.iconImageView.image = UIImage(named: "phone")
       cell.shortTextLabel.text = restaurant.phone
+      cell.selectionStyle = .none
       
       return cell
     case 1:
@@ -56,12 +57,14 @@ class RestaurantDetailViewController: UIViewController, UITableViewDelegate, UIT
                                                for: indexPath) as! RestaurantDetailIconTextCell
       cell.iconImageView.image = UIImage(named: "map")
       cell.shortTextLabel.text = restaurant.location
+      cell.selectionStyle = .none
       
       return cell
     case 2:
       let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self),
                                                for: indexPath) as! RestaurantDetailTextCell
       cell.descriptionLabel.text = restaurant.description
+      cell.selectionStyle = .none
       
       return cell
     default:

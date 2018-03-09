@@ -153,18 +153,18 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge6-84-BsO" userLabel="Type Label">
-                                            <rect key="frame" x="14" y="315" width="100" height="21"/>
+                                            <rect key="frame" x="14" y="315" width="120" height="21"/>
                                             <color key="backgroundColor" red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="MnU-9F-qNX"/>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="XyQ-eC-V2y"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="XyQ-eC-V2y"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="13"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-tick" translatesAutoresizingMaskIntoConstraints="NO" id="byo-DT-RNk" userLabel="Heart Image View">
-                                            <rect key="frame" x="122" y="318" width="15" height="15"/>
+                                            <rect key="frame" x="142" y="318" width="15" height="15"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="15" id="iI9-hv-pok"/>
                                                 <constraint firstAttribute="height" constant="15" id="ulq-v7-mRI"/>
