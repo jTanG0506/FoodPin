@@ -166,6 +166,18 @@ class RestaurantTableViewController: UITableViewController {
     super.viewDidLoad()
     tableView.cellLayoutMarginsFollowReadableWidth = true
     navigationController?.navigationBar.prefersLargeTitles = true
+    
+    // Make navigation bar transparent.
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    
+    // Change font and colour of the large title.
+    if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
+      navigationController?.navigationBar.largeTitleTextAttributes = [
+        NSAttributedStringKey.foregroundColor: UIColor(red: 0.906, green: 0.294, blue: 0.235, alpha: 1.0),
+        NSAttributedStringKey.font: customFont
+      ]
+    }
   }
   
   // MARK: - UITableViewDataSource Protocol
