@@ -136,9 +136,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eRz-5b-77J" userLabel="Header Image View">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eRz-5b-77J" userLabel="Header Image View">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
                                         </imageView>
+                                        <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGA-G5-NNj" userLabel="Dim View">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ydt-xk-qw1" userLabel="Name Label">
                                             <rect key="frame" x="14" y="270" width="91.5" height="42"/>
                                             <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="35"/>
@@ -172,11 +176,15 @@
                                         <constraint firstItem="eRz-5b-77J" firstAttribute="top" secondItem="955-2h-S7Q" secondAttribute="top" id="QhE-la-YkL"/>
                                         <constraint firstItem="eRz-5b-77J" firstAttribute="leading" secondItem="955-2h-S7Q" secondAttribute="leading" id="UKN-WT-kEc"/>
                                         <constraint firstItem="ge6-84-BsO" firstAttribute="leading" secondItem="955-2h-S7Q" secondAttribute="leading" constant="14" id="ZCC-dx-zWE"/>
+                                        <constraint firstItem="AGA-G5-NNj" firstAttribute="top" secondItem="955-2h-S7Q" secondAttribute="top" id="ahP-Za-94y"/>
                                         <constraint firstAttribute="trailing" secondItem="eRz-5b-77J" secondAttribute="trailing" id="fCh-Jm-fWX"/>
+                                        <constraint firstAttribute="trailing" secondItem="AGA-G5-NNj" secondAttribute="trailing" id="h5m-TP-Xt8"/>
                                         <constraint firstItem="ge6-84-BsO" firstAttribute="top" secondItem="Ydt-xk-qw1" secondAttribute="bottom" constant="3" id="hI2-td-D8U"/>
                                         <constraint firstAttribute="bottom" secondItem="eRz-5b-77J" secondAttribute="bottom" id="hOp-uC-RVn"/>
+                                        <constraint firstItem="AGA-G5-NNj" firstAttribute="leading" secondItem="955-2h-S7Q" secondAttribute="leading" id="hjY-D2-iVl"/>
                                         <constraint firstItem="byo-DT-RNk" firstAttribute="leading" secondItem="ge6-84-BsO" secondAttribute="trailing" constant="8" id="n2r-Gp-S98"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ydt-xk-qw1" secondAttribute="trailing" constant="50" id="pP2-L0-G75"/>
+                                        <constraint firstAttribute="bottom" secondItem="AGA-G5-NNj" secondAttribute="bottom" id="ppk-A3-3iW"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="headerImageView" destination="eRz-5b-77J" id="JfK-rl-EaR"/>
@@ -221,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pY-5C-EXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="-161"/>
+            <point key="canvasLocation" x="1784.8" y="-161.46926536731635"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Qp-0D-rDY">
