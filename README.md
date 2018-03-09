@@ -6,7 +6,7 @@ Restaurant information and pinning app based on Simon Ng's book
 - [X] Chapter 11 - Table Row Deletion, Swipe for Actions, Activity Controller and MVC
 - [X] Chapter 12 - Introduction to Navigation Controller and Segue
 - [X] Chapter 13 - Object Oriented Programming, Project Organization and Code Documentation
-- [ ] Chapter 14 - Detail View Enhancement, Custom Fonts and Self Sizing Cells
+- [X] Chapter 14 - Detail View Enhancement, Custom Fonts and Self Sizing Cells
 - [ ] Chapter 15 - Navigation Bar Customization, Extensions and Dynamic Type
 - [ ] Chapter 16 - Working with Maps
 - [ ] Chapter 17 - Basic Animations, Visual Effects and Unwind Segues
