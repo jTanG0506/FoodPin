@@ -8,7 +8,7 @@ Restaurant information and pinning app based on Simon Ng's book
 - [X] Chapter 13 - Object Oriented Programming, Project Organization and Code Documentation
 - [X] Chapter 14 - Detail View Enhancement, Custom Fonts and Self Sizing Cells
 - [X] Chapter 15 - Navigation Bar Customization, Extensions and Dynamic Type
-- [ ] Chapter 16 - Working with Maps
+- [X] Chapter 16 - Working with Maps
 - [ ] Chapter 17 - Basic Animations, Visual Effects and Unwind Segues
 - [ ] Chapter 18 - Working with Static Table Views, Camera and NSLayoutConstraint
 - [ ] Chapter 19 - Working with Core Data
