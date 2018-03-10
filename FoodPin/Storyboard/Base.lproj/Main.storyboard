@@ -322,6 +322,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="mapView" destination="UIv-qL-fQe" id="2gG-ph-xWX"/>
+                                            <segue destination="L8S-q5-GuS" kind="show" identifier="showMap" id="E6F-L5-ly2"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -345,6 +346,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0pY-5C-EXF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1784.8" y="-161.46926536731635"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kmA-90-vLC">
+            <objects>
+                <viewController id="L8S-q5-GuS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jit-Pz-0gY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9jm-Vs-tIJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9jm-Vs-tIJ" firstAttribute="bottom" secondItem="5h8-ka-Bi5" secondAttribute="bottom" id="W3G-7V-efK"/>
+                            <constraint firstItem="9jm-Vs-tIJ" firstAttribute="trailing" secondItem="5h8-ka-Bi5" secondAttribute="trailing" id="ZJC-Ah-IbH"/>
+                            <constraint firstItem="9jm-Vs-tIJ" firstAttribute="top" secondItem="Jit-Pz-0gY" secondAttribute="top" id="Zcx-D8-8O2"/>
+                            <constraint firstItem="9jm-Vs-tIJ" firstAttribute="leading" secondItem="5h8-ka-Bi5" secondAttribute="leading" id="lFr-dv-XiD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5h8-ka-Bi5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uid-Q5-DEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2520.8000000000002" y="-161.46926536731635"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Qp-0D-rDY">
