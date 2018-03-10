@@ -347,10 +347,10 @@
             </objects>
             <point key="canvasLocation" x="1784.8" y="-161.46926536731635"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="kmA-90-vLC">
             <objects>
-                <viewController id="L8S-q5-GuS" sceneMemberID="viewController">
+                <viewController id="L8S-q5-GuS" customClass="MapViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jit-Pz-0gY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,6 +368,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5h8-ka-Bi5"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="9jm-Vs-tIJ" id="gWE-hm-0Vi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uid-Q5-DEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
