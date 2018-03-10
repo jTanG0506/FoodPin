@@ -20,6 +20,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDelegate, UIT
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    navigationController?.hidesBarsOnSwipe = false
     navigationItem.largeTitleDisplayMode = .never
     
     // Set tableView delegate and data source
@@ -40,6 +41,13 @@ class RestaurantDetailViewController: UIViewController, UITableViewDelegate, UIT
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
     navigationController?.navigationBar.tintColor = .white
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    navigationController?.hidesBarsOnSwipe = false
+    navigationController?.setNavigationBarHidden(false, animated: true)
   }
   
   // MARK: - UITableViewDataSource

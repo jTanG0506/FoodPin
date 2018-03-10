@@ -166,6 +166,7 @@ class RestaurantTableViewController: UITableViewController {
     super.viewDidLoad()
     tableView.cellLayoutMarginsFollowReadableWidth = true
     navigationController?.navigationBar.prefersLargeTitles = true
+    navigationController?.hidesBarsOnSwipe = true
     
     // Configure navigation bar appearance
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -178,6 +179,12 @@ class RestaurantTableViewController: UITableViewController {
         NSAttributedStringKey.font: customFont
       ]
     }
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    navigationController?.hidesBarsOnSwipe = true
   }
   
   // MARK: - UITableViewDataSource Protocol
