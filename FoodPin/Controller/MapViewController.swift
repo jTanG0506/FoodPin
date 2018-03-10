@@ -9,14 +9,17 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
   
   @IBOutlet var mapView: MKMapView!
   
   var restaurant = Restaurant()
   
+  // MARK: - View controller life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    mapView.delegate = self
     
     // Convert address to coordinate and annotate it on map
     let geoCoder = CLGeocoder()
@@ -46,9 +49,25 @@ class MapViewController: UIViewController {
     }
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  // MARK: - MKMapViewDelegate
+  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    let identifier = "MyMarker"
+    
+    if annotation.isKind(of: MKUserLocation.self) {
+      return nil
+    }
+    
+    // Reuse the annotation if possible
+    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+    
+    if annotationView == nil {
+      annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+    }
+    
+    annotationView?.glyphText = "🍔"
+    annotationView?.markerTintColor = .orange
+    
+    return annotationView
   }
   
 }
