@@ -167,7 +167,7 @@ class RestaurantTableViewController: UITableViewController {
     tableView.cellLayoutMarginsFollowReadableWidth = true
     navigationController?.navigationBar.prefersLargeTitles = true
     
-    // Make navigation bar transparent.
+    // Configure navigation bar appearance
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
     navigationController?.navigationBar.shadowImage = UIImage()
     

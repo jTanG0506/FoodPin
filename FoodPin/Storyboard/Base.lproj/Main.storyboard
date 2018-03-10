@@ -118,7 +118,9 @@
                             <outlet property="delegate" destination="0iS-ky-E7D" id="VaG-us-RV3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Food Pin" id="Dem-4Q-ScE"/>
+                    <navigationItem key="navigationItem" title="Food Pin" id="Dem-4Q-ScE">
+                        <barButtonItem key="backBarButtonItem" title=" " id="mp8-ZL-Hmt"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M60-qE-DkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +135,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7rx-g5-ded">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="955-2h-S7Q" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
@@ -266,8 +268,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B4M-CZ-bgM" firstAttribute="trailing" secondItem="7rx-g5-ded" secondAttribute="trailing" id="5Ec-p5-1uD"/>
-                            <constraint firstItem="7rx-g5-ded" firstAttribute="top" secondItem="B4M-CZ-bgM" secondAttribute="top" id="HBv-dy-Sbh"/>
                             <constraint firstItem="7rx-g5-ded" firstAttribute="leading" secondItem="B4M-CZ-bgM" secondAttribute="leading" id="fsC-vQ-elS"/>
+                            <constraint firstItem="7rx-g5-ded" firstAttribute="top" secondItem="wa6-hD-lKX" secondAttribute="top" id="rjQ-nl-Cvh"/>
                             <constraint firstItem="B4M-CZ-bgM" firstAttribute="bottom" secondItem="7rx-g5-ded" secondAttribute="bottom" id="yW3-Vs-lVC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B4M-CZ-bgM"/>

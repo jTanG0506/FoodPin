@@ -19,18 +19,27 @@ class RestaurantDetailViewController: UIViewController, UITableViewDelegate, UIT
   // MARK: - View controller life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+
     navigationItem.largeTitleDisplayMode = .never
-    tableView.separatorStyle = .none
     
     // Set tableView delegate and data source
     tableView.delegate = self
     tableView.dataSource = self
     
+    // Disable inset adjustment behavior to move table view upwards.
+    tableView.separatorStyle = .none
+    tableView.contentInsetAdjustmentBehavior = .never
+
     // Configure header view
     headerView.nameLabel.text = restaurant.name
     headerView.typeLabel.text = restaurant.type
     headerView.headerImageView.image = UIImage(named: restaurant.image)
     headerView.heartImageView.isHidden = !restaurant.isVisited
+    
+    // Make the navigation bar transparent
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    navigationController?.navigationBar.tintColor = .white
   }
   
   // MARK: - UITableViewDataSource
@@ -45,24 +54,21 @@ class RestaurantDetailViewController: UIViewController, UITableViewDelegate, UIT
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     switch indexPath.row {
     case 0:
-      let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self),
-                                               for: indexPath) as! RestaurantDetailIconTextCell
+      let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
       cell.iconImageView.image = UIImage(named: "phone")
       cell.shortTextLabel.text = restaurant.phone
       cell.selectionStyle = .none
       
       return cell
     case 1:
-      let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self),
-                                               for: indexPath) as! RestaurantDetailIconTextCell
+      let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailIconTextCell.self), for: indexPath) as! RestaurantDetailIconTextCell
       cell.iconImageView.image = UIImage(named: "map")
       cell.shortTextLabel.text = restaurant.location
       cell.selectionStyle = .none
       
       return cell
     case 2:
-      let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self),
-                                               for: indexPath) as! RestaurantDetailTextCell
+      let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
       cell.descriptionLabel.text = restaurant.description
       cell.selectionStyle = .none
       
