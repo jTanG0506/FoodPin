@@ -28,6 +28,7 @@
 		8D979972204ED2FE001AFE28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D979971204ED2FE001AFE28 /* Assets.xcassets */; };
 		8D979975204ED2FE001AFE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D979973204ED2FE001AFE28 /* LaunchScreen.storyboard */; };
 		8D97997D204ED368001AFE28 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97997C204ED368001AFE28 /* RestaurantTableViewController.swift */; };
+		8DC7619A2053F93900E80DD5 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC761992053F93900E80DD5 /* UIColor+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		8D979974204ED2FE001AFE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D979976204ED2FE001AFE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D97997C204ED368001AFE28 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		8DC761992053F93900E80DD5 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		8D979969204ED2FE001AFE28 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				8DC761982053F84800E80DD5 /* Extensions */,
 				8D4C90CF2051E5BB00144A41 /* Storyboard */,
 				8D4C90D02051E5CA00144A41 /* Model */,
 				8D4C90D12051E5D600144A41 /* View */,
@@ -158,6 +161,14 @@
 				8D97996A204ED2FE001AFE28 /* AppDelegate.swift */,
 			);
 			path = FoodPin;
+			sourceTree = "<group>";
+		};
+		8DC761982053F84800E80DD5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8DC761992053F93900E80DD5 /* UIColor+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +259,7 @@
 				8D97997D204ED368001AFE28 /* RestaurantTableViewController.swift in Sources */,
 				8D26DFAC204F0C0C00E4B39B /* RestaurantTableViewCell.swift in Sources */,
 				8D4C90EC2052DEAA00144A41 /* RestaurantDetailIconTextCell.swift in Sources */,
+				8DC7619A2053F93900E80DD5 /* UIColor+Ext.swift in Sources */,
 				8D4C90CC2051BD5200144A41 /* RestaurantDetailViewController.swift in Sources */,
 				8D97996B204ED2FE001AFE28 /* AppDelegate.swift in Sources */,
 			);

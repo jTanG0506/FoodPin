@@ -175,7 +175,7 @@ class RestaurantTableViewController: UITableViewController {
     // Change font and colour of the large title.
     if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
       navigationController?.navigationBar.largeTitleTextAttributes = [
-        NSAttributedStringKey.foregroundColor: UIColor(red: 0.906, green: 0.294, blue: 0.235, alpha: 1.0),
+        NSAttributedStringKey.foregroundColor: UIColor(red: 231, green: 76, blue: 60),
         NSAttributedStringKey.font: customFont
       ]
     }
@@ -211,6 +211,8 @@ class RestaurantTableViewController: UITableViewController {
     return cell
   }
   
+  // MARK: - UITableViewDelegate Protocol
+  // Left swipe actions.
   override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     
     let toggleAction = UIContextualAction(style: .normal, title: "") {
@@ -225,13 +227,12 @@ class RestaurantTableViewController: UITableViewController {
     
     // Display the appropriate icon.
     toggleAction.image = restaurants[indexPath.row].isVisited ? UIImage(named: "undo") : UIImage(named: "tick")
-    toggleAction.backgroundColor = UIColor(red: 0.149, green: 0.604, blue: 0.278, alpha: 1)
+    toggleAction.backgroundColor = UIColor(red: 39, green: 174, blue: 96)
     
     let swipeConfiguration = UISwipeActionsConfiguration(actions: [toggleAction])
     return swipeConfiguration
   }
   
-  // MARK: - UITableViewDelegate Protocol
   // Right swipe actions.
   override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     let deleteAction = UIContextualAction(style: .destructive, title: "") {
@@ -268,9 +269,9 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     // Customise appearance of actions
-    deleteAction.backgroundColor = UIColor(red: 231.0 / 255.0, green: 76.0 / 255.0, blue: 60.0 / 255.0, alpha: 1.0)
+    deleteAction.backgroundColor = UIColor(red: 231, green: 76, blue: 60)
     deleteAction.image = UIImage(named: "delete")
-    shareAction.backgroundColor = UIColor(red: 254.0 / 255.0, green: 149.0 / 255.0, blue: 38.0 / 255.0, alpha: 1.0)
+    shareAction.backgroundColor = UIColor(red: 254, green: 149, blue: 38)
     shareAction.image = UIImage(named: "share")
     
     let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
