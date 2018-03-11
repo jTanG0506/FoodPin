@@ -13,6 +13,7 @@ class ReviewViewController: UIViewController {
   // MARK: - Properties
   @IBOutlet var backgroundImageView: UIImageView!
   @IBOutlet var rateButtons: [UIButton]!
+  @IBOutlet var closeButton: UIButton!
   
   var restaurant = Restaurant()
   
@@ -28,11 +29,16 @@ class ReviewViewController: UIViewController {
     blurEffectView.frame = view.bounds
     backgroundImageView.addSubview(blurEffectView)
     
+    let upTransform = CGAffineTransform.init(translationX: 0, y: -600)
     let rightTransform = CGAffineTransform.init(translationX: 600, y: 0)
     let scaleUpTransform = CGAffineTransform.init(scaleX: 5.0, y: 5.0)
     let moveScaleTransform = scaleUpTransform.concatenating(rightTransform)
     
-    // Animate buttons as 'slide-in'.
+    // Animate close button as 'slide-in-from-top'.
+    closeButton.transform = upTransform
+    closeButton.alpha = 0
+    
+    // Animate rating buttons as 'slide-in-from-right' with scaling.
     for rateButton in rateButtons {
       rateButton.transform = moveScaleTransform
       rateButton.alpha = 0
@@ -63,6 +69,11 @@ class ReviewViewController: UIViewController {
     UIView.animate(withDuration: 0.4, delay: 0.3, options: [], animations: {
       self.rateButtons[4].alpha = 1.0
       self.rateButtons[4].transform = .identity
+    }, completion: nil)
+    
+    UIView.animate(withDuration: 0.4, delay: 0.7, options: [], animations: {
+      self.closeButton.alpha = 1.0
+      self.closeButton.transform = .identity
     }, completion: nil)
   }
   
