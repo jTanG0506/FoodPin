@@ -46,30 +46,13 @@ class ReviewViewController: UIViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    UIView.animate(withDuration: 0.4, delay: 0.1, options: [], animations: {
-      self.rateButtons[0].alpha = 1.0
-      self.rateButtons[0].transform = .identity
-    }, completion: nil)
-    
-    UIView.animate(withDuration: 0.4, delay: 0.15, options: [], animations: {
-      self.rateButtons[1].alpha = 1.0
-      self.rateButtons[1].transform = .identity
-    }, completion: nil)
-    
-    UIView.animate(withDuration: 0.4, delay: 0.2, options: [], animations: {
-      self.rateButtons[2].alpha = 1.0
-      self.rateButtons[2].transform = .identity
-    }, completion: nil)
-    
-    UIView.animate(withDuration: 0.4, delay: 0.25, options: [], animations: {
-      self.rateButtons[3].alpha = 1.0
-      self.rateButtons[3].transform = .identity
-    }, completion: nil)
-    
-    UIView.animate(withDuration: 0.4, delay: 0.3, options: [], animations: {
-      self.rateButtons[4].alpha = 1.0
-      self.rateButtons[4].transform = .identity
-    }, completion: nil)
+    for i in 0...4 {
+      let delay = 0.1 + 0.05 * Double(i)
+      UIView.animate(withDuration: 0.4, delay: delay, options: [], animations: {
+        self.rateButtons[i].alpha = 1.0
+        self.rateButtons[i].transform = .identity
+      }, completion: nil)
+    }
     
     UIView.animate(withDuration: 0.4, delay: 0.7, options: [], animations: {
       self.closeButton.alpha = 1.0
