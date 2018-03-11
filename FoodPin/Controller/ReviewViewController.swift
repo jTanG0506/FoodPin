@@ -28,11 +28,13 @@ class ReviewViewController: UIViewController {
     blurEffectView.frame = view.bounds
     backgroundImageView.addSubview(blurEffectView)
     
-    let rightTransformation = CGAffineTransform.init(translationX: 600, y: 0)
+    let rightTransform = CGAffineTransform.init(translationX: 600, y: 0)
+    let scaleUpTransform = CGAffineTransform.init(scaleX: 5.0, y: 5.0)
+    let moveScaleTransform = scaleUpTransform.concatenating(rightTransform)
     
     // Animate buttons as 'slide-in'.
     for rateButton in rateButtons {
-      rateButton.transform = rightTransformation
+      rateButton.transform = moveScaleTransform
       rateButton.alpha = 0
     }
   }
