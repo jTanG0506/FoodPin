@@ -635,10 +635,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New Restaurant" id="U6Q-5r-a22">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="close" id="P57-YA-0sa">
+                        <barButtonItem key="leftBarButtonItem" image="close" id="P57-YA-0sa">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="bMN-k7-7F2" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="IwF-gv-Jli"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="save" id="Fg0-nB-U3A">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="saveButtonTappedWithSender:" destination="TCe-AL-OUe" id="6G7-48-rQ2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -801,5 +807,6 @@
         <image name="photo" width="24" height="18"/>
         <image name="plus" width="16" height="16"/>
         <image name="sad" width="78" height="87"/>
+        <image name="save" width="20" height="20"/>
     </resources>
 </document>
