@@ -648,6 +648,7 @@
                         <outlet property="descriptionTextView" destination="wcs-Zl-Qlu" id="RJH-c9-DCP"/>
                         <outlet property="nameTextField" destination="F7R-dE-iKq" id="zIJ-dA-8Q1"/>
                         <outlet property="phoneTextField" destination="Kww-n4-Nql" id="dzb-DW-2as"/>
+                        <outlet property="photoImageView" destination="U2B-ez-rp4" id="uO8-ev-TKo"/>
                         <outlet property="typeTextField" destination="27Z-sO-Wdr" id="Fz7-vP-9cQ"/>
                     </connections>
                 </tableViewController>
