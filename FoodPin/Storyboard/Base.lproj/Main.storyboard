@@ -121,7 +121,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Food Pin" id="Dem-4Q-ScE">
                         <barButtonItem key="backBarButtonItem" title=" " id="mp8-ZL-Hmt"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" id="IEF-92-z6x">
+                        <barButtonItem key="rightBarButtonItem" image="plus" id="IEF-92-z6x">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="Q8d-Kb-XwL" kind="presentation" identifier="addRestaurant" id="vTm-hg-apB"/>
@@ -427,7 +427,7 @@
         <!--New Restaurant-->
         <scene sceneID="JD6-LZ-dyi">
             <objects>
-                <tableViewController id="TCe-AL-OUe" sceneMemberID="viewController">
+                <tableViewController id="TCe-AL-OUe" customClass="NewRestaurantController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="oQe-EJ-4Xx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -609,13 +609,12 @@
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KQj-g0-GZw">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wcs-Zl-Qlu">
                                                             <rect key="frame" x="0.0" y="25.5" width="341" height="70.5"/>
-                                                            <color key="backgroundColor" red="0.8862745098" green="0.8980392157" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="backgroundColor" red="0.88627450980392153" green="0.89803921568627454" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits"/>
-                                                        </textField>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -644,11 +643,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="eHD-Ez-VNe" id="SgX-4B-veE"/>
+                        <outlet property="descriptionTextView" destination="wcs-Zl-Qlu" id="RJH-c9-DCP"/>
+                        <outlet property="nameTextField" destination="F7R-dE-iKq" id="zIJ-dA-8Q1"/>
+                        <outlet property="phoneTextField" destination="Kww-n4-Nql" id="dzb-DW-2as"/>
+                        <outlet property="typeTextField" destination="27Z-sO-Wdr" id="Fz7-vP-9cQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sgj-66-JJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bMN-k7-7F2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4260" y="-1232"/>
+            <point key="canvasLocation" x="4260" y="-1232.3838080959522"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="RtX-kV-jre">
