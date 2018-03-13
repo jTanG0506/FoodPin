@@ -11,7 +11,7 @@ Restaurant information and pinning app based on Simon Ng's book
 - [X] Chapter 16 - Working with Maps
 - [X] Chapter 17 - Basic Animations, Visual Effects and Unwind Segues
 - [X] Chapter 18 - Working with Static Table Views, Camera and NSLayoutConstraint
-- [ ] Chapter 19 - Working with Core Data
+- [X] Chapter 19 - Working with Core Data
 - [ ] Chapter 20 - Search Bar and UISearchController
 - [ ] Chapter 21 - Building Walkthrough Screens with UIPageViewController and Container Views
 - [ ] Chapter 22 - Exploring Tab Bar Controller and Storyboard References
