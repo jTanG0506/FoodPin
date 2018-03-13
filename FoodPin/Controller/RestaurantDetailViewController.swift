@@ -38,6 +38,9 @@ class RestaurantDetailViewController: UIViewController, UITableViewDelegate, UIT
       headerView.headerImageView.image = UIImage(data: restaurantImage as Data)
     }
     headerView.heartImageView.isHidden = !restaurant.isVisited
+    if let rating = restaurant.rating {
+      headerView.ratingImageView.image = UIImage(named: rating)
+    }
     
     // Make the navigation bar transparent
     navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -126,6 +129,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDelegate, UIT
       if let rating = segue.identifier {
         self.restaurant.rating = rating
         self.headerView.ratingImageView.image = UIImage(named: rating)
+        
+        // Save update to rating
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+          appDelegate.saveContext()
+        }
         
         let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
         self.headerView.ratingImageView.transform = scaleTransform
