@@ -165,8 +165,13 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     let deleteAction = UIContextualAction(style: .destructive, title: "") {
       (action, sourceView, completionHandler) in
       
-      self.restaurants.remove(at: indexPath.row)
-      self.tableView.deleteRows(at: [indexPath], with: .fade)
+      // Delete the row from the data store
+      if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+        let context = appDelegate.persistentContainer.viewContext
+        let restaurantToDelete = self.fetchResultController.object(at: indexPath)
+        context.delete(restaurantToDelete)
+        appDelegate.saveContext()
+      }
       
       completionHandler(true)
     }
