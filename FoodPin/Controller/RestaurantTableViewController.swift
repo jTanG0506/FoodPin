@@ -13,6 +13,8 @@ class RestaurantTableViewController: UITableViewController {
   // MARK: - Properties
   var restaurants: [RestaurantMO] = []
   
+  @IBOutlet var emptyRestaurantView: UIView!
+  
   // MARK: - View controller life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -31,6 +33,10 @@ class RestaurantTableViewController: UITableViewController {
         NSAttributedStringKey.font: customFont
       ]
     }
+    
+    // Prepare the empty view
+    tableView.backgroundView = emptyRestaurantView
+    tableView.backgroundView?.isHidden = true
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +47,14 @@ class RestaurantTableViewController: UITableViewController {
   
   // MARK: - UITableViewDataSource Protocol
   override func numberOfSections(in tableView: UITableView) -> Int {
+    if restaurants.count > 0 {
+      tableView.backgroundView?.isHidden = true
+      tableView.separatorStyle = .singleLine
+    } else {
+      tableView.backgroundView?.isHidden = false
+      tableView.separatorStyle = .none
+    }
+    
     return 1
   }
   

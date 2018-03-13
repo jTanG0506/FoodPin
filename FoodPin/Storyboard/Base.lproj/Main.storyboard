@@ -128,8 +128,27 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emptyRestaurantView" destination="LQT-tO-FVF" id="VFH-bt-Z0r"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M60-qE-DkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="LQT-tO-FVF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="gil-Je-OCU">
+                            <rect key="frame" x="28" y="120" width="319" height="372"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="gil-Je-OCU" firstAttribute="leading" secondItem="BAN-xh-bBW" secondAttribute="leading" constant="28" id="644-Cv-Z68"/>
+                        <constraint firstItem="gil-Je-OCU" firstAttribute="top" secondItem="BAN-xh-bBW" secondAttribute="top" constant="100" id="XTb-di-JID"/>
+                        <constraint firstItem="BAN-xh-bBW" firstAttribute="trailing" secondItem="gil-Je-OCU" secondAttribute="trailing" constant="28" id="tBV-4L-4al"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="BAN-xh-bBW"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1063" y="-161"/>
         </scene>
@@ -801,6 +820,7 @@
         <image name="close" width="16" height="16"/>
         <image name="cool" width="78" height="83"/>
         <image name="cross" width="33" height="32"/>
+        <image name="empty" width="310" height="372"/>
         <image name="happy" width="78" height="86"/>
         <image name="heart-tick" width="22" height="21"/>
         <image name="love" width="78" height="82"/>
