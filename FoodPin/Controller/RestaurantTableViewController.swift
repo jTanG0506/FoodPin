@@ -70,6 +70,12 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     
     searchController.searchResultsUpdater = self
     searchController.dimsBackgroundDuringPresentation = false
+    
+    // Customise appearance of the searchController.
+    searchController.searchBar.placeholder = "Search restaurants..."
+    searchController.searchBar.barTintColor = .white
+    searchController.searchBar.backgroundImage = UIImage()
+    searchController.searchBar.tintColor = UIColor(red: 231, green: 76, blue: 60)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -135,7 +141,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
   
   // MARK: - UITableViewDataSource Protocol
   override func numberOfSections(in tableView: UITableView) -> Int {
-    if restaurants.count > 0 {
+    if restaurants.count > 0 || searchController.isActive {
       tableView.backgroundView?.isHidden = true
       tableView.separatorStyle = .singleLine
     } else {
