@@ -9,13 +9,16 @@
 import UIKit
 import CoreData
 
-class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
   
   // MARK: - Properties
   var restaurants: [RestaurantMO] = []
   var fetchResultController: NSFetchedResultsController<RestaurantMO>!
   
   @IBOutlet var emptyRestaurantView: UIView!
+  
+  var searchController: UISearchController!
+  var searchResults: [RestaurantMO] = []
   
   // MARK: - View controller life cycle
   override func viewDidLoad() {
@@ -60,12 +63,38 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         print(error)
       }
     }
+    
+    // Initialise search controller.
+    searchController = UISearchController(searchResultsController: nil)
+    tableView.tableHeaderView = searchController.searchBar
+    
+    searchController.searchResultsUpdater = self
+    searchController.dimsBackgroundDuringPresentation = false
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
     navigationController?.hidesBarsOnSwipe = true
+  }
+  
+  // MARK: - UISearchResultsUpdating
+  func updateSearchResults(for searchController: UISearchController) {
+    if let searchText = searchController.searchBar.text {
+      filterContent(for: searchText)
+      tableView.reloadData()
+    }
+  }
+  
+  func filterContent(for searchText: String) {
+    searchResults = restaurants.filter({ (restaurant) -> Bool in
+      if let name = restaurant.name {
+        let isMatch = name.localizedCaseInsensitiveContains(searchText)
+        return isMatch
+      }
+      
+      return false
+    })
   }
   
   // MARK: - NSFetchedResultsControllerDelegate
@@ -118,20 +147,23 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return restaurants.count
+    return searchController.isActive ? searchResults.count : restaurants.count
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cellIdentifier = "Cell"
     let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
     
-    cell.nameLabel.text = restaurants[indexPath.row].name
-    if let restaurantImage = restaurants[indexPath.row].image {
+    // Determine whether the restaurant should be from search result or original array
+    let restaurant = searchController.isActive ? searchResults[indexPath.row] : restaurants[indexPath.row]
+    
+    cell.nameLabel.text = restaurant.name
+    if let restaurantImage = restaurant.image {
       cell.thumbnailImageView.image = UIImage(data: restaurantImage as Data)
     }
-    cell.typeLabel.text = restaurants[indexPath.row].type
-    cell.locationLabel.text = restaurants[indexPath.row].location
-    cell.heartImageView.isHidden = !restaurants[indexPath.row].isVisited
+    cell.typeLabel.text = restaurant.type
+    cell.locationLabel.text = restaurant.location
+    cell.heartImageView.isHidden = !restaurant.isVisited
     
     cell.selectionStyle = .none
     
@@ -211,12 +243,16 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     return swipeConfiguration
   }
   
+  override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    return !searchController.isActive
+  }
+  
   // MARK: - Navigation
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showRestuarantDetail" {
       if let indexPath = tableView.indexPathForSelectedRow {
         let destinationController = segue.destination as! RestaurantDetailViewController
-        destinationController.restaurant = restaurants[indexPath.row]
+        destinationController.restaurant = searchController.isActive ? searchResults[indexPath.row] : restaurants[indexPath.row]
       }
     }
   }
