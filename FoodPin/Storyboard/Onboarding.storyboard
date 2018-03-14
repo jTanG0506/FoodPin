@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="8sp-dI-cBg">
+            <objects>
+                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="vBt-DI-BJa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NjW-eL-THY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="-257"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oNH-yO-R7G">
+            <objects>
+                <viewController id="jH2-0w-1L2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tPW-XB-WU4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bye-gU-b8V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                                <connections>
+                                    <segue destination="vBt-DI-BJa" kind="embed" id="j7B-iF-MQK"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vk5-zf-TW7">
+                                <rect key="frame" x="0.0" y="450" width="375" height="217"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vk5-zf-TW7" firstAttribute="trailing" secondItem="JBL-TX-O3t" secondAttribute="trailing" id="DKa-mc-ltf"/>
+                            <constraint firstItem="Bye-gU-b8V" firstAttribute="trailing" secondItem="JBL-TX-O3t" secondAttribute="trailing" id="PJL-Mc-SJx"/>
+                            <constraint firstItem="Bye-gU-b8V" firstAttribute="leading" secondItem="JBL-TX-O3t" secondAttribute="leading" id="WCP-rT-ZYb"/>
+                            <constraint firstItem="JBL-TX-O3t" firstAttribute="height" secondItem="Vk5-zf-TW7" secondAttribute="height" multiplier="1:3" id="Zkw-uz-ZyW"/>
+                            <constraint firstItem="Vk5-zf-TW7" firstAttribute="top" secondItem="Bye-gU-b8V" secondAttribute="bottom" id="gPk-oF-zdw"/>
+                            <constraint firstItem="Vk5-zf-TW7" firstAttribute="leading" secondItem="JBL-TX-O3t" secondAttribute="leading" id="uns-we-y8m"/>
+                            <constraint firstItem="Bye-gU-b8V" firstAttribute="top" secondItem="tPW-XB-WU4" secondAttribute="top" id="vzt-bG-SWk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JBL-TX-O3t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E7A-lQ-ry0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="-159"/>
+        </scene>
+    </scenes>
+</document>

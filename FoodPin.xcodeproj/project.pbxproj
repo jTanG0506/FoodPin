@@ -31,6 +31,7 @@
 		8D979975204ED2FE001AFE28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D979973204ED2FE001AFE28 /* LaunchScreen.storyboard */; };
 		8D97997D204ED368001AFE28 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D97997C204ED368001AFE28 /* RestaurantTableViewController.swift */; };
 		8DC1C2BD205842C800A94D0B /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DC1C2BB205842C800A94D0B /* FoodPin.xcdatamodeld */; };
+		8DC1C2BF2059E3A900A94D0B /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC1C2BE2059E3A900A94D0B /* Onboarding.storyboard */; };
 		8DC7619A2053F93900E80DD5 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC761992053F93900E80DD5 /* UIColor+Ext.swift */; };
 		8DC7619F205446FA00E80DD5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC7619E205446FA00E80DD5 /* MapKit.framework */; };
 		8DC761A1205448DE00E80DD5 /* RestaurantDetailSeperatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC761A0205448DE00E80DD5 /* RestaurantDetailSeperatorCell.swift */; };
@@ -67,6 +68,7 @@
 		8D979976204ED2FE001AFE28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D97997C204ED368001AFE28 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		8DC1C2BC205842C800A94D0B /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		8DC1C2BE2059E3A900A94D0B /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		8DC761992053F93900E80DD5 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		8DC7619E205446FA00E80DD5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8DC761A0205448DE00E80DD5 /* RestaurantDetailSeperatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailSeperatorCell.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				8D97996E204ED2FE001AFE28 /* Main.storyboard */,
 				8D979973204ED2FE001AFE28 /* LaunchScreen.storyboard */,
+				8DC1C2BE2059E3A900A94D0B /* Onboarding.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				8D4C90E52052B44D00144A41 /* Rubik-Black.ttf in Resources */,
 				8D4C90E72052B44D00144A41 /* Rubik-LightItalic.ttf in Resources */,
 				8D4C90E82052B44D00144A41 /* Rubik-Italic.ttf in Resources */,
+				8DC1C2BF2059E3A900A94D0B /* Onboarding.storyboard in Resources */,
 				8D4C90E22052B44D00144A41 /* Rubik-Medium.ttf in Resources */,
 				8D4C90E62052B44D00144A41 /* Rubik-Light.ttf in Resources */,
 			);
