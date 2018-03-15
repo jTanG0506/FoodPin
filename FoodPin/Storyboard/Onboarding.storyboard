@@ -6,10 +6,19 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Page View Controller-->
         <scene sceneID="8sp-dI-cBg">
@@ -18,6 +27,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NjW-eL-THY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1268" y="-257"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZXU-89-dA4">
+            <objects>
+                <viewController id="HkB-q3-R4u" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9rj-5Y-VJG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="kXT-6Z-4UP">
+                                <rect key="frame" x="24" y="50" width="327" height="330"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZBY-KQ-HS4">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="229"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZBY-KQ-HS4" secondAttribute="height" multiplier="327:229" id="gEl-xp-taK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GjA-b8-TIB">
+                                        <rect key="frame" x="140.5" y="279" width="46.5" height="51"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNH-4P-VAP" userLabel="Heading">
+                                                <rect key="frame" x="0.0" y="0.0" width="46.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.37647058823529411" green="0.37647058823529411" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0Q-fk-4ZN" userLabel="Subheading">
+                                                <rect key="frame" x="1.5" y="30.5" width="43" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
+                                                <color key="textColor" red="0.37647058820000001" green="0.37647058820000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kXT-6Z-4UP" firstAttribute="leading" secondItem="kdM-GS-5XS" secondAttribute="leading" constant="24" id="6vt-ip-iqG"/>
+                            <constraint firstItem="kXT-6Z-4UP" firstAttribute="top" secondItem="kdM-GS-5XS" secondAttribute="top" constant="50" id="Etp-vJ-1OK"/>
+                            <constraint firstItem="kdM-GS-5XS" firstAttribute="trailing" secondItem="kXT-6Z-4UP" secondAttribute="trailing" constant="24" id="NWb-Zy-ObX"/>
+                            <constraint firstItem="kdM-GS-5XS" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="kXT-6Z-4UP" secondAttribute="bottom" constant="10" id="xBD-df-trz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kdM-GS-5XS"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="451"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4CT-Gw-SAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="-257"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oNH-yO-R7G">
