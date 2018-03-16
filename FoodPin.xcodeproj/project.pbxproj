@@ -40,6 +40,7 @@
 		8DC761A520544A6000E80DD5 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC761A420544A6000E80DD5 /* UINavigationController+Ext.swift */; };
 		8DC761A7205451F900E80DD5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC761A6205451F900E80DD5 /* MapViewController.swift */; };
 		8DD5805120555A6A000F4C55 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD5805020555A6A000F4C55 /* ReviewViewController.swift */; };
+		8DF91881205C2016008C9568 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF91880205C2016008C9568 /* WalkthroughPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		8DC761A420544A6000E80DD5 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		8DC761A6205451F900E80DD5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8DD5805020555A6A000F4C55 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		8DF91880205C2016008C9568 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				8DD5805020555A6A000F4C55 /* ReviewViewController.swift */,
 				8D53324C20566FB3001A80E0 /* NewRestaurantController.swift */,
 				8DC1C2C0205A791000A94D0B /* WalkthroughContentViewController.swift */,
+				8DF91880205C2016008C9568 /* WalkthroughPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				8DC1C2C1205A791000A94D0B /* WalkthroughContentViewController.swift in Sources */,
 				8D97996B204ED2FE001AFE28 /* AppDelegate.swift in Sources */,
 				8D53324D20566FB3001A80E0 /* NewRestaurantController.swift in Sources */,
+				8DF91881205C2016008C9568 /* WalkthroughPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
