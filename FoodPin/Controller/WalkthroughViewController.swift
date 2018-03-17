@@ -24,6 +24,8 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
   
   // MARK: - Action Methods
   @IBAction func skipButtonTapped(sender: UIButton) {
+    // Save that the user has completed tutorial, so not to show again.
+    UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
     dismiss(animated: true, completion: nil)
   }
   
@@ -33,6 +35,8 @@ class WalkthroughViewController: UIViewController, WalkthroughPageViewController
       case 0...1:
         walkthroughPageViewController?.forwardPage()
       case 2:
+        // Save that the user has completed tutorial, so not to show again.
+        UserDefaults.standard.set(true, forKey: "hasViewedWalkthrough")
         dismiss(animated: true, completion: nil)
       default:
         break

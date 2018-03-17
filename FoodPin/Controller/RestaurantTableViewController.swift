@@ -85,6 +85,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
   }
   
   override func viewDidAppear(_ animated: Bool) {
+    // Present the walkthrough screens, only if the user hasn't already completed them.
+    if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+      return
+    }
+    
     let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
     if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
       present(walkthroughViewController, animated: true, completion: nil)
