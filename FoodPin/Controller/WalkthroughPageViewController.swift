@@ -18,6 +18,8 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
                          "Search and locate your favourite restaurant on maps",
                          "Find restaurants shared by your friends and other foodies"]
   
+  var currentIndex = 0
+  
   // MARK: - View controller life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,7 +27,8 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     dataSource = self
     
     if let startingViewController = contentViewController(at: 0) {
-      setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
+      setViewControllers([startingViewController], direction: .forward,
+                         animated: true, completion: nil)
     }
   }
   
@@ -52,7 +55,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
     // Create a new view controller and pass suitable data.
     let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
     if let pageContentViewController = storyboard.instantiateViewController(withIdentifier:
-      "WalkthroughContentViewController")as? WalkthroughContentViewController {
+      "WalkthroughContentViewController") as? WalkthroughContentViewController {
       
       pageContentViewController.imageFile = pageImages[index]
       pageContentViewController.heading = pageHeadings[index]

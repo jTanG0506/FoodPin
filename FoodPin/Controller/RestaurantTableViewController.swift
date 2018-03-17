@@ -84,6 +84,14 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     navigationController?.hidesBarsOnSwipe = true
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+    if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+      print("TRYING TO PRESENT")
+      present(walkthroughViewController, animated: true, completion: nil)
+    }
+  }
+  
   // MARK: - UISearchResultsUpdating
   func updateSearchResults(for searchController: UISearchController) {
     if let searchText = searchController.searchBar.text {
