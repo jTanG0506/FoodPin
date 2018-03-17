@@ -14,7 +14,7 @@ Restaurant information and pinning app based on Simon Ng's book
 - [X] Chapter 19 - Working with Core Data
 - [X] Chapter 20 - Search Bar and UISearchController
 - [X] Chapter 21 - Building Walkthrough Screens with UIPageViewController and Container Views
-- [ ] Chapter 22 - Exploring Tab Bar Controller and Storyboard References
+- [X] Chapter 22 - Exploring Tab Bar Controller and Storyboard References
 - [ ] Chapter 23 - Getting Started with WKWebView and SFSafariViewController
 - [ ] Chapter 24 - Exploring CloudKit
 - [ ] Chapter 25 - Localizing Your App to Reach More Users
