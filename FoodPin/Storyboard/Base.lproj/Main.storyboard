@@ -711,11 +711,11 @@
             </objects>
             <point key="canvasLocation" x="1658" y="1218"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--About-->
         <scene sceneID="dAV-hp-Afc">
             <objects>
                 <navigationController id="Tce-qL-iHS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="vZr-qF-BvG"/>
+                    <tabBarItem key="tabBarItem" title="About" image="about" id="vZr-qF-BvG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eAE-XD-V8h">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -824,11 +824,11 @@
             </objects>
             <point key="canvasLocation" x="2856.8000000000002" y="362.96851574212894"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favourites-->
         <scene sceneID="8Qp-0D-rDY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GA5-Pm-6zp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="oUo-if-J1Y"/>
+                    <tabBarItem key="tabBarItem" title="Favourites" image="favorite" id="oUo-if-J1Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pyd-1e-25W">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -888,13 +888,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hX-fF-bNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-714" y="-1052"/>
+            <point key="canvasLocation" x="702" y="-1498"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Discover-->
         <scene sceneID="ybu-hH-g99">
             <objects>
                 <navigationController id="2rZ-N0-lk8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="Ap4-ky-hCi"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="discover" id="Ap4-ky-hCi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IuU-YD-9kg">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -905,7 +905,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odh-Fm-qHw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1666" y="-1052"/>
+            <point key="canvasLocation" x="-15" y="-1498"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pRC-Fh-Ot0">
@@ -928,11 +928,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about" width="23" height="21"/>
         <image name="angry" width="78" height="103"/>
         <image name="close" width="16" height="16"/>
         <image name="cool" width="78" height="83"/>
         <image name="cross" width="33" height="32"/>
+        <image name="discover" width="35" height="20"/>
         <image name="empty" width="310" height="372"/>
+        <image name="favorite" width="22" height="22"/>
         <image name="happy" width="78" height="86"/>
         <image name="heart-tick" width="22" height="21"/>
         <image name="love" width="78" height="82"/>
