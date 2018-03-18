@@ -1,6 +1,12 @@
 # FoodPin
-Restaurant information and pinning app based on Simon Ng's book
 
+## :question: About
+Restaurant information and pinning app based on AppCoda's [Beginning iOS 11 Programming with Swift](https://appcoda.com/swift/)
+
+## :warning: Notices
+- Chapters 1 - 8 are introductory chapters which are not related to FoodPin.
+
+## :blue_book: Chapter Checklist
 - [X] Chapter 9 - Customize Table Views Using Prototype Cell
 - [X] Chapter 10 - Interacting with Table Views and Using UIAlertController
 - [X] Chapter 11 - Table Row Deletion, Swipe for Actions, Activity Controller and MVC
