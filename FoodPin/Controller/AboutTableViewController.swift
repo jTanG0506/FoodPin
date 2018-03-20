@@ -10,6 +10,7 @@ import UIKit
 
 class AboutTableViewController: UITableViewController {
   
+  // MARK: - Properties
   var sectionTitles = ["Feedback", "Follow Us"]
   var sectionContent = [
     [
@@ -23,6 +24,7 @@ class AboutTableViewController: UITableViewController {
     ]
   ]
   
+  // MARK: - View controller life cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -42,11 +44,6 @@ class AboutTableViewController: UITableViewController {
     
     // Remove excess seperators in table view.
     tableView.tableFooterView = UIView()
-  }
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
   }
   
   // MARK: - Table view data source
@@ -83,12 +80,23 @@ class AboutTableViewController: UITableViewController {
         if let url = URL(string: link) {
           UIApplication.shared.open(url)
         }
+      } else if indexPath.row == 1 {
+        performSegue(withIdentifier: "showWebView", sender: self)
       }
     default:
       break
     }
     
     tableView.deselectRow(at: indexPath, animated: false)
+  }
+  
+  // MARK: - Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showWebView" {
+      if let destinationController = segue.destination as? WebViewController, let indexPath = tableView.indexPathForSelectedRow {
+        destinationController.targetURL = sectionContent[indexPath.section][indexPath.row].link
+      }
+    }
   }
   
 }

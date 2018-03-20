@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D26DFAC204F0C0C00E4B39B /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D26DFAB204F0C0C00E4B39B /* RestaurantTableViewCell.swift */; };
+		8D4C90A32061B2AC00E441AD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C90A22061B2AC00E441AD /* WebViewController.swift */; };
 		8D4C90CC2051BD5200144A41 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C90CB2051BD5200144A41 /* RestaurantDetailViewController.swift */; };
 		8D4C90CE2051C7B800144A41 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4C90CD2051C7B800144A41 /* Restaurant.swift */; };
 		8D4C90DF2052B44D00144A41 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D4C90D52052B44D00144A41 /* Rubik-Regular.ttf */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		8D26DFAB204F0C0C00E4B39B /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		8D4C90A22061B2AC00E441AD /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		8D4C90CB2051BD5200144A41 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		8D4C90CD2051C7B800144A41 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		8D4C90D52052B44D00144A41 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				8DF91880205C2016008C9568 /* WalkthroughPageViewController.swift */,
 				8DF91882205C248B008C9568 /* WalkthroughViewController.swift */,
 				8DD449F3206119AF00FFFE1C /* AboutTableViewController.swift */,
+				8D4C90A22061B2AC00E441AD /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DC761A32054491E00E80DD5 /* RestaurantDetailMapCell.swift in Sources */,
+				8D4C90A32061B2AC00E441AD /* WebViewController.swift in Sources */,
 				8D4C90EA2052B73000144A41 /* RestaurantDetailHeaderView.swift in Sources */,
 				8DD5805120555A6A000F4C55 /* ReviewViewController.swift in Sources */,
 				8DC761A520544A6000E80DD5 /* UINavigationController+Ext.swift in Sources */,
