@@ -73,4 +73,22 @@ class AboutTableViewController: UITableViewController {
     return cell
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let link = sectionContent[indexPath.section][indexPath.row].link
+    
+    switch indexPath.section {
+    // Feedback section
+    case 0:
+      if indexPath.row == 0 {
+        if let url = URL(string: link) {
+          UIApplication.shared.open(url)
+        }
+      }
+    default:
+      break
+    }
+    
+    tableView.deselectRow(at: indexPath, animated: false)
+  }
+  
 }
