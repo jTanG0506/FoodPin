@@ -12,25 +12,36 @@ class AboutTableViewController: UITableViewController {
   
   var sectionTitles = ["Feedback", "Follow Us"]
   var sectionContent = [
-                        [
-                          (image: "store", text: "Rate us on App Store", link: "https://www.apple.com/itunes/charts/paid-apps/"),
-                          (image: "chat", text: "Tell us your feedback", link: "http://www.appcoda.com/contact")
-                        ],
-                        [
-                          (image: "twitter", text: "Twitter", link: "https://twitter.com/appcodamobile"),
-                          (image: "facebook", text: "Facebook", link: "https://facebook.com/appcodamobile"),
-                          (image: "instagram", text: "Instagram", link: "https://www.instagram.com/appcodadotcom")
-                        ]
-                       ]
+    [
+      (image: "store", text: "Rate us on App Store", link: "https://www.apple.com/itunes/charts/paid-apps/"),
+      (image: "chat", text: "Tell us your feedback", link: "http://www.appcoda.com/contact")
+    ],
+    [
+      (image: "twitter", text: "Twitter", link: "https://twitter.com/appcodamobile"),
+      (image: "facebook", text: "Facebook", link: "https://facebook.com/appcodamobile"),
+      (image: "instagram", text: "Instagram", link: "https://www.instagram.com/appcodadotcom")
+    ]
+  ]
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = false
+    tableView.cellLayoutMarginsFollowReadableWidth = true
+    navigationController?.navigationBar.prefersLargeTitles = true
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    // Configure navigation bar appearance
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.shadowImage = UIImage()
+    
+    if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
+      navigationController?.navigationBar.largeTitleTextAttributes = [
+        NSAttributedStringKey.foregroundColor: UIColor(red: 231, green: 76, blue: 60),
+        NSAttributedStringKey.font: customFont
+      ]
+    }
+    
+    // Remove excess seperators in table view.
+    tableView.tableFooterView = UIView()
   }
   
   override func didReceiveMemoryWarning() {
