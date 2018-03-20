@@ -21,7 +21,7 @@ Restaurant information and pinning app based on AppCoda's [Beginning iOS 11 Prog
 - [X] Chapter 20 - Search Bar and UISearchController
 - [X] Chapter 21 - Building Walkthrough Screens with UIPageViewController and Container Views
 - [X] Chapter 22 - Exploring Tab Bar Controller and Storyboard References
-- [ ] Chapter 23 - Getting Started with WKWebView and SFSafariViewController
+- [X] Chapter 23 - Getting Started with WKWebView and SFSafariViewController
 - [ ] Chapter 24 - Exploring CloudKit
 - [ ] Chapter 25 - Localizing Your App to Reach More Users
 - [ ] Chapter 26 - Deploying and Testing Your App on a Real iOS Device
