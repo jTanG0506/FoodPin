@@ -1,4 +1,4 @@
-# FoodPin
+![](header.png)
 
 ## :question: About
 Restaurant information and pinning app based on AppCoda's [Beginning iOS 11 Programming with Swift](https://appcoda.com/swift/)
